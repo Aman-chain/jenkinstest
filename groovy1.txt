@@ -10,3 +10,4 @@ TF_VAR_source_cidr_blocks_pub
 TF_VAR_source_sg_id_pub
 TF_VAR_instance_os_pub
 TF_VAR_instance_osversion_pub
+TEST
