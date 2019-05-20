@@ -1,4 +1,0 @@
-instance_name
-vpcid
-admin_username
-admin_password
