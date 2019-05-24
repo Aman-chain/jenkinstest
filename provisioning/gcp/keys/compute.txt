@@ -1,0 +1,5 @@
+TF_VAR_ami
+
+TF_VAR_instance_type
+
+TF_VAR_region
