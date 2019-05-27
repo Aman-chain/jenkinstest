@@ -1,0 +1,10 @@
+[
+  {
+    "ParameterKey": "ami",
+    "ParameterValue": "ami-0eacc5b7915ba9921"
+  },
+  {
+    "ParameterKey": "instancetype",
+    "ParameterValue": "t2.micro"
+  }
+]
