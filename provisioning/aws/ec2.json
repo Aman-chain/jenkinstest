@@ -1,0 +1,24 @@
+    {
+"Parameters": {
+    "instancetype": {
+        "Description": "Select one of the possible instance types",
+        "Type": "String",
+        "Default": "t2.micro",
+        "AllowedValues": ["t2.micro", "t2.small", "t2.medium"]
+    },
+    "ami":{
+        "Description": "Image id of ec2 instance",
+        "Type": "String",
+        "Default": "ami-00e782930f1c3dbc7"
+    }
+},
+"Resources":{
+    "Server": {
+        "Type": "AWS::EC2::Instance",
+        "Properties": {
+            "ImageId": {"Ref":"ami"},
+            "InstanceType": {"Ref": "instancetype"}
+        }
+    }
+}
+}
