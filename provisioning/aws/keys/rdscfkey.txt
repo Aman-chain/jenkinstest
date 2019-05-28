@@ -1,0 +1,6 @@
+DBName
+DBUser
+DBPassword
+DBAllocatedStorage
+DBInstanceClass
+MultiAZ
