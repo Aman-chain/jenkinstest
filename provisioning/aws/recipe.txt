@@ -1,0 +1,34 @@
+###########################################################################################################################################
+Welcome to Recipe for provisioning. This would be further updated as new instructions/steps are added in.
+###########################################################################################################################################
+
+If the flag in Jenkins pipeline is CF, we run Cloudformation scripts. If the flag is TF, we run Terraform scripts. Please check the
+instructions accordingly.
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+FOR CLOUDFORMATION, run following commands:
+
+cd /var/lib/jenkins/workspace/test/cloudformation
+
+stackname=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 3 ; echo '')
+
+aws cloudformation create-stack --stack-name $stackname --template-body file://$body --parameters file://awsparam.json --region ap-south-1
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+FOR TERRAFORM, run following commands:
+
+cd /var/lib/jenkins/workspace/test/terra
+
+echo $"export PATH=\$PATH:$(pwd)" >> ~/.bash_profile
+
+source ~/.bash_profile
+
+terraform init
+
+terraform plan -out tfplan
+
+terraform apply -auto-approve -lock=false
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+UPDATE THE OUTPUT ACCORDINGLY BACK TO JIRA.
