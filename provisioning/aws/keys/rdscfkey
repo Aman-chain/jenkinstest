@@ -1,0 +1,19 @@
+Please provide the following parameters (separated by new line):
+
+Key: DBName
+Desc: The name of RDS Database.
+
+Key: DBUser
+Desc: The username of RDS db.
+
+Key: DBPassword
+Desc: The password of RDS db.
+
+Key: DBAllocatedStorage
+Desc: The size of the RDS db in GB.
+
+Key: DBInstanceClass
+Desc: The DB instance class determines the computation and memory capacity of an Amazon RDS DB instance.
+
+Key: MultiAZ
+Desc: Takes only TRUE/FALSE value. If True, AWS would create automatic RDS failover.
