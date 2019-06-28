@@ -1,0 +1,13 @@
+Please provide the following parameters (separated by new line):
+
+Key: TF_VAR_instance_name
+Desc: The DB instance class determines the computation and memory capacity of an Amazon RDS DB instance.
+
+Key: TF_VAR_vpcid
+Desc: The id of your AWS VPC to connect RDS.
+
+Key: TF_VAR_admin_username
+Desc: The username of RDS db.
+
+Key: TF_VAR_admin_password
+Desc: The password of RDS db.
