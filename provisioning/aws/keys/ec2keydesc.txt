@@ -1,10 +1,11 @@
-Please provide following parameters (separated by new line):
+TERRAFORM AWS EC2 PROVISIONING:
+Please provide Terraform Base template, and the following parameters (separated by new line):
 
 Key: TF_VAR_ami
-Desc: An AMI provides the information required to launch an instance.
+Description: An AMI provides the information required to launch an instance.
 
 Key: TF_VAR_instance_type
-Desc: instance type that you specify determines the hardware of the host computer used for your instance
+Description: instance type that you specify determines the hardware of the host computer used for your instance
 
 Key: TF_VAR_region
-Desc: Each AWS Region is a separate geographic area
+Description: Each AWS Region is a separate geographic area
