@@ -1,8 +1,9 @@
-Please provide the following parameters (separated by new line):
+CLOUDFORMATION AWS EC2 PROVISIONING:
+Please provide Cloudformation base template, and the following parameters (separated by new line):
 
 Key: ami
-Desc: An provides the information required to launch an instance.
+Description: An provides the information required to launch an instance.
 
 Key: instancetype
-Desc: instance type that you specify determines the hardware of the host computer used for your instance
+Description: instance type that you specify determines the hardware of the host computer used for your instance
 
