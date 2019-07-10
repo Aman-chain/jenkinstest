@@ -6,13 +6,13 @@ Run the appropriate section according to the flag value displayed earlier.
 Current build works for CLOUDFORMATION and TERRAFORM provisioning.
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-FOR CLOUDFORMATION, run following commands:
+FOR CLOUDFORMATION, login into your Jenkins instance, and run following commands:
 
 cd /var/lib/jenkins/workspace/test/cloudformation
 
 stackname=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 3 ; echo '')
 
-aws cloudformation create-stack --stack-name $stackname --template-body file://$body --parameters file://awsparam.json --region ap-south-1
+aws cloudformation create-stack --stack-name $stackname --template-body file://ec2.json --parameters file://awsparam.json --region ap-south-1
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 FOR TERRAFORM, run following commands:
