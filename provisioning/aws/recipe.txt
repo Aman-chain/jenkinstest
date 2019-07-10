@@ -10,7 +10,7 @@ FOR CLOUDFORMATION, login into your Jenkins instance, and run following commands
 
 cd /var/lib/jenkins/workspace/test/cloudformation
 
-stackname=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 3 ; echo '')
+stackname=$(head /dev/urandom | tr -dc A-Za-z | head -c 3 ; echo '')
 
 aws cloudformation create-stack --stack-name $stackname --template-body file://ec2.json --parameters file://awsparam.json --region ap-south-1
 
