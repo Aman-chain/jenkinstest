@@ -1,0 +1,8 @@
+Please gather following INPUT Files:
+
+FILENAME: ec2inputs.properties
+DESCRIPTION: This file contains ec2input properties file for provisioning EC2 instance. 
+
+FILENAME: vpcinputs.properties
+DESCRIPTION: This file contains vpcinput properties file for provisioning VPC.
+
