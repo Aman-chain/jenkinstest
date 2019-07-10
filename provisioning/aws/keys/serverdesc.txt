@@ -1,4 +1,4 @@
-Please gather following INPUT Files from JIRA PM:
+Please gather following INPUT Files from JIRA PM and upload them to /MF/demo/server-migration/ folder:
 
 FILENAME: ec2inputs.properties
 DESCRIPTION: This file contains ec2input properties file for provisioning EC2 instance. 
