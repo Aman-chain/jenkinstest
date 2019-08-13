@@ -1,0 +1,4 @@
+1.	Terminal server must have connectivity to our target cloud environment through VPN tunnel/Gateway because we are going to run our terraform module from terminal server.
+2.	IAM user should be created in cloud environment and should be assigned terraform policy https://gist.github.com/arsdehnel/70e292467ced2a39f472ddca44629c08
+3.	IAM user access ID and Access Key, that to be used in terraform provider.tf
+4.  Collect user input in an Excel format using AWS_Data_Collection_Template.xls
