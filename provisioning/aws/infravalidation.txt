@@ -1,1 +1,42 @@
-test
+2.	Python Script Usage
+To use python scripts for testing, need to use config files which is in “json” format.
+Format of config json file is key-value pairs. Before using python scripts, so convert the excel template downloaded from ATADATA Console to json (Incorporated in python script provided below).
+2.1	EC2 Test cases
+For EC2 below are the testcases available. 
+               - Check the EC2 OS Type
+               - Check EC2 Platform
+	       - Check Security Group
+               - Check VPC
+	        - Check if server instance type is aligned with requirements
+	        - Check Assigned Role
+               - Check Region
+               - Check VPC ID for EC2
+               - Check Subnet Id for EC2
+               - Check AMI ID for EC2
+               - Tenancy
+               - Private Keys
+
+Step 1: Download the Schemadata inventory file on jump server from ATADATA Console to defined location.
+                            
+Step 2:  We need to feed the excel sheet as an input to below python script to validate the infrastructure of the EC2 instance and validation output will be uploaded to S3 Bucket.
+SCRIPT NAME: infrastructurevalidation.py
+                            
+Functionality of Script:
+1.	 Script will convert the excel sheet from 
+
+To run the test run below command:
+$ python Infrastructurevalidation.py
+
+Sample Output:
+For 10.0.0.16:
+OS Type check with config ............................PASS
+Security Group check -> Expected: ATADATA_Console_Rules Current:['sg-0fd511f32129ea3d8']  ....FAILED
+EC2 type check with config ..............................PASS
+Private Keys check with config ..............................PASS
+Tenancy check with config ..............................PASS
+No role assigned to EC2
+EC2 Availability Zone check with config .................PASS
+VPC ID config matches .......................PASS
+Subnet Check with config ..................PASS
+AMI ID with config .................PASS
+
