@@ -1,1 +1,10 @@
-test2
+Post-Migration Checks for Windows:
+Step 1: Collect the inventory of all migrated server IP’s in “server.txt”
+Step 2: Pass the server.txt to below windows PowerShell script as an input and run the script in the defined location of jump server.
+                                                               
+Post-Migration Checks for Linux:
+Step 1: Collect the inventory of all migrated server IP’s in “server.txt”
+Step 2: Pass the server.txt to below Shell script as an input and run the script in the defined location of jump server.
+
+SCRIPT NAME: postcheck.py
+
