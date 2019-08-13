@@ -1,1 +1,11 @@
-tesssst
+Pre-Requisites to use this script:
+•	Password – Less Login
+1.	All the servers must be accessible with same username and password.
+2.	All the servers should communicate with master server from where the script is running
+3.	Uncomment Password Authentication and Permit Root Login
+Command: Sudo vi  /etc/ssh/sshd_config
+Password Authentication Yes
+Permit Root Login Yes
+
+4.	Need to restart ssh Service
+Command: sudo service sshd restart
