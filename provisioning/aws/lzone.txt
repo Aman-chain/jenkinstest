@@ -1,0 +1,12 @@
+1.	Create input.csv from AWS_Data_Collection_Template.xls
+2.	Pass input values as terraform variables input file using a shell script run.sh
+3.	Create all the terraform file vpc.tf, resources.tf etc to create resources
+4.	Then prepare single wrapper script (wrapper.sh) which will run following commands one by one:
+
+Run ./wrapper.sh, it will subsequently run following commands
+1.	./run.sh input.csv --- this command will prepare terrafile.properties by which variables value can be given
+2.	terraform init – will initiate terraform current version and module
+3.	terraform plan --- will show the plan and list of resources going to deploy
+4.	terraform apply --- auto approve- will create resources
+5.	terraform output >> outputnew1.csv – will generate output and store the output in .csv format as outputnew1.csv
+6.	aws s3 cp outputnew1.csv s3://backup.test.com/outputnew1.csv – will upload the output in s3 bucket name backup.test.com
